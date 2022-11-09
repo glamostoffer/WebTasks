@@ -28,7 +28,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("/", "/registration", "/login", "/users/**", "/add", "/add/**").permitAll()
+                    .antMatchers("/users/add", "/login", "/", "/static/**").permitAll()
                     .anyRequest().authenticated()
                 .and()
                     .formLogin()
@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .permitAll();
     }
 
-    @Bean
+    /*@Bean
     @Override
     public UserDetailsService userDetailsService() {
         UserDetails user =
@@ -49,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         .roles("USER")
                         .build();
         return new InMemoryUserDetailsManager(user);
-    }
+    }*/
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

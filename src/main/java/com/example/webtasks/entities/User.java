@@ -1,76 +1,66 @@
 package com.example.webtasks.entities;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(schema="users")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Long id;
 
+    @Getter
+    @Setter
     private String email;
+
+    @Getter
+    @Setter
     private String username;
+
+    @Getter
+    @Setter
     private String password;
 
-    public Integer getId() {
-        return id;
-    }
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
+    @Enumerated(EnumType.STRING)
+    @Getter
+    @Setter
+    private Set<Role> roles;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String name) {
-        this.username = name;
-    }
+    @OneToMany(mappedBy = "user")
+    private List<Tables> userTable; // рассмотреть и доделать
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+        return true;
     }
 }

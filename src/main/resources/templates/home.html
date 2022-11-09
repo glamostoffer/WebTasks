@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    <div class="grad">
+        <div class="background_gradient" id="back_grad_1"></div>
+        <div class="background_gradient" id="back_grad_2"></div>
+        <div class="background_gradient" id="back_grad_3"></div>
+    </div>
+
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+
+    <section>
+        <div class="container">
+            <div class="form">
+                <h2>Product Name</h2>
+
+                <div class="buttons">
+
+                    <form th:action="@{/login}" method="get">
+                        <div id="sign_in">
+                            <input type="submit" value="Sign In" name="login_button" class="button">
+                        </div>
+                    </form>
+
+                    <form th:action="@{/users/add}" method="get">
+                        <div id="sign_up">
+                            <input type="submit" value="Sign Up" name="add" class="button">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
