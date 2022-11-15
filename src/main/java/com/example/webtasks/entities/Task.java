@@ -8,12 +8,20 @@ import javax.persistence.*;
 @Entity
 public class Task {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Getter
+    @Setter
     private Long id;
 
     @Getter
     @Setter
-    @OneToOne
+    @ManyToOne
     private User author;
+
+    @Getter
+    @Setter
+    @ManyToOne
+    private Tables tables;
 
     @Getter
     @Setter

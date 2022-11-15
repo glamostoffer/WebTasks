@@ -41,7 +41,7 @@ public class UserController {
     }
 
     @DeleteMapping(path="/delete")
-    public @ResponseBody String addNewUser(@RequestParam Integer id) {
+    public @ResponseBody String addNewUser(@RequestParam Long id) {
         userService.deleteById(id);
         return "Deleted";
     }
