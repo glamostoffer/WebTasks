@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepos extends JpaRepository<User, Integer> {
+public interface UserRepos extends JpaRepository<User, Long> {
 
     User findByUsername(String username);
 }

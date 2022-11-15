@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+<h1>Hello its main page</h1>
+<h2>Create Table</h2>
+<form action="#" method="post">
+    <input type="text" name="tableName">
+    <input type="submit">
+
+</form>
+
+<h1>Your tables</h1>
+<div th:each="table : ${AllUserTables}">
+
+    <a th:href="@{'/get/table'(id=${table.getId()})}" ><p th:text="${table.getName()}"></p></a>
+</div>
+</body>
+</html>

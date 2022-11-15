@@ -15,6 +15,8 @@ import java.util.Set;
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Getter
+    @Setter
     private Long id;
 
     @Getter
@@ -38,6 +40,9 @@ public class User implements UserDetails {
 
     @OneToMany(mappedBy = "user")
     private List<Tables> userTable; // рассмотреть и доделать
+
+    @OneToMany(mappedBy = "author")
+    private List<Task> tasks;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

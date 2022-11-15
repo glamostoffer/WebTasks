@@ -37,6 +37,11 @@
                             <input type="submit" value="Sign Up" name="add" class="button">
                         </div>
                     </form>
+                    <!-- if user is authenticated he can check his tables-->
+                    <div sec:authorize="isAuthenticated()">
+                        <a href="/main">Check Your tables</a>
+
+                    </div>
 
                 </div>
             </div>

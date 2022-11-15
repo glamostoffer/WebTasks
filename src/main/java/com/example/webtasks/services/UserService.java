@@ -48,7 +48,7 @@ public class UserService implements UserDetailsService {
         return userRepos.findAll();
     }
 
-    public Boolean deleteById(Integer id) {
+    public Boolean deleteById(Long id) {
         userRepos.deleteById(id);
         return true;
     }
