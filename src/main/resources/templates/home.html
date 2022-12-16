@@ -38,9 +38,8 @@
                         </div>
                     </form>
                     <!-- if user is authenticated he can check his tables-->
-                    <div sec:authorize="isAuthenticated()">
-                        <a href="/main">Check Your tables</a>
-
+                    <div sec:authorize="isAuthenticated()" id="tables">
+                        <a href="/main" class="button">Check Your tables</a>
                     </div>
 
                 </div>

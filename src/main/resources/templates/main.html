@@ -4,21 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/main.css">
 </head>
 <body>
-<h1>Hello its main page</h1>
-<h2>Create Table</h2>
-<form action="#" method="post">
-    <input type="text" name="tableName">
-    <input type="submit">
+    <h1>Hello its main page</h1>
+    <div class="container">
+        <h2>Create Table</h2>
+        <form action="#" method="post">
+            <input placeholder="table name" type="text" name="tableName">
+            <input type="submit">
+        </form>
+    </div>
 
-</form>
-
-<h1>Your tables</h1>
-<div th:each="table : ${AllUserTables}">
-
-    <a th:href="@{'/get/table'(id=${table.getId()})}" ><p th:text="${table.getName()}"></p></a>
-</div>
+    <div class="container" id="tables">
+        <h1>Your tables</h1>
+        <div class="tables_container">
+            <div th:each="table : ${AllUserTables}" class="table">
+                <a th:href="@{'/get/table'(id=${table.getId()})}" ><p th:text="${table.getName()}"></p></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

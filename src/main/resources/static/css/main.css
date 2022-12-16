@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #222831;
+    background: url("../img/windows-11-dark-theme-bloom-collection-dark-background-blue-3840x2160-9057.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: aliceblue;
+    margin: 1.5em;
+}
+
+h2 {
+    color: aliceblue;
+}
+
+.container {
+    margin: 3%;
+    width: fit-content;
+    padding: 45px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 28px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#tables h1 {
+    margin: 0;
+}
+
+#tables {
+    width: 94%;
+}
+
+.container form input {
+    margin-top: 0.6em;
+    padding: 0.4em 0.6em;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 28px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: ivory;
+    transition: 0.3s;
+}
+
+.container form input::placeholder { color: ivory }
+
+.form_bar button:hover {
+    box-shadow: 2px 2px #200f26;
+}
+
+.container form input text {
+    color: aliceblue;
+}
+
+.container form input[type=submit]:hover {
+    background: rgba(105, 105, 105, 0.35);
+}
+
+.tables_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.table {
+    padding: 16px;
+    margin: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 28px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.table:hover {
+    transform: translateX(12px);
+}
+
+.table a {
+    text-decoration: none;
+    color: aliceblue;
+}

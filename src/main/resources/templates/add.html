@@ -3,13 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Add</title>
+    <link rel="stylesheet" href="../static/css/signup.css" class="css">
 </head>
 <body>
-<form th:action="@{/users/add}" method="post">
-    <div><label> User Name: <input type="text" name="username"/> </label></div>
-    <div><label> Email: <input type="email" name="email"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Add user"/></div>
-</form>
+
+    <div class="grad">
+        <div class="background_gradient" id="back_grad_1"></div>
+        <div class="background_gradient" id="back_grad_2"></div>
+    </div>
+
+    <section>
+        <div class="box">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+
+            <div class="container">
+                <div class="form">
+                    <h2>Registration</h2>
+                    <form th:action="@{/users/add}" method="post">
+                        <div class="input_box">
+                            <input type="text" name="username" placeholder="username" required/>
+                        </div>
+                        <div class="input_box">
+                            <input type="email" name="email" placeholder="email" required/>
+                        </div>
+                        <div class="input_box">
+                             <input type="password" name="password" placeholder="password" required/>
+                        </div>
+                        <div class="input_box">
+                            <input type="submit" value="Sign Up"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
 </body>
 </html>

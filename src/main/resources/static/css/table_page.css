@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: aliceblue;
+    background: url("../img/blue-background-abstract-background-windows-11-3840x2160-8846.jpg");
+    background-color: #222831;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body h1 {
+    margin: 1em 2em;
+}
+
+body h2 {
+    margin: 1em 3em;
+}
+
+form {
+    width: 50%;
+    margin: 0 6em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#text_form {
+    margin: 0 1em;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    padding: 6px 16px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    color: aliceblue;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#text_form::placeholder {
+    color: #151515;
+}
+
+#submit_button {
+    background: aliceblue;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #151515;
+    width: 15%;
+    margin: auto 0;
+    padding: 6px 10px;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+#submit_button:hover {
+    box-shadow: 0 0 15px lightblue;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 2em 1em;
+    min-height: 400px;
+    height: fit-content;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 28px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.task {
+    margin: 20px 64px;
+    width: fit-content;
+    height: fit-content;
+    padding: 1.2em 1.5em;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 28px 45px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}

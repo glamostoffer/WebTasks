@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222831;
+    background: url("../img/windows-11-stock-orange-abstract-dark-background-3840x2400-8960.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    padding: 2em 3em;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 4em auto;
+    width: 85%;
+    backdrop-filter: blur(4px);
+}
+
+.form-container h1 {
+    margin: 0 0 1.4em 0;
+}
+
+.text-field {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 2em 1em;
+}
+
+.text-field input {
+    margin: 0.6em 2em;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    padding: 6px 16px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    font-size: 16px;
+    color: aliceblue;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-field textarea {
+    text-align: start;
+    margin: 0.6em 2em;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    font-size: 16px;
+    color: aliceblue;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}

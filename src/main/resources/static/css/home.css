@@ -191,6 +191,7 @@ section {
     background-color: #720650;
     width: fit-content;
     padding: 10px 18px;
+    transition: 0.3s;
 }
 
 #sign_in:hover {
@@ -203,15 +204,33 @@ section {
     background-color: #075791;
     width: fit-content;
     padding: 10px 18px;
+    transition: 0.3s;
 }
 
 #sign_up:hover {
     box-shadow: 0 0 8px #0879c9;
 }
 
+#tables {
+    border-radius: 30px;
+    border: solid rgba(49, 49, 49, 0.93) 2px;
+    background-color: #b07d0e;
+    width: fit-content;
+    padding: 10px 18px;
+    transition: 0.3s;
+}
+
+#tables:hover {
+    box-shadow: 0 0 8px #e58b13;
+}
+
+#tables a {
+    text-decoration: none;
+}
+
 .buttons {
     display: flex;
-    width: 50%;
+    width: 70%;
     justify-content: space-between;
     flex-direction: row;
 }

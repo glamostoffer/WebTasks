@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../static/css/profile.css">
+</head>
+<body>
+<div class="form-container">
+    <form method="post" enctype="multipart/form-data">
+        <h1 align="center">Your profile</h1>
+        <input name="id" th:value="${user.getId()}" hidden>
+        <div class="text-field">
+            <label for="username">UserName</label>
+            <input type="text" id="username" th:value="${user.getUsername()}">
+        </div>
+
+        <div class="text-field">
+            <label for="password">Password</label>
+            <input type="text" id="password" th:value="${user.getPassword()}">
+        </div>
+        <div class="text-field">
+            <label for="description">Description</label>
+            <textarea type="text" id="description" th:text="${user.getDescription()}" cols="20" rows="10">
+        </textarea>
+        </div>
+
+        <div style="text-align: center">
+            <input type="submit" value="Change">
+        </div>
+    </form>
+</div>
+</body>
+</html>
